@@ -1,0 +1,18 @@
+
+<?php 
+
+kuva_puurid(); 
+
+foreach ($puurid as $nr => $puur) {
+
+echo "<div>";
+  echo "<h3>Puur ".$nr."</h3>";
+  foreach ($puur as $loom) {
+    echo "<img src=\"pildid/".$loom['liik'].".png\" alt=\"".$loom['nimi']."\" title=\"".$loom['nimi']."\"/>"; 
+  }
+
+echo "</div>";
+
+}
+
+?>
