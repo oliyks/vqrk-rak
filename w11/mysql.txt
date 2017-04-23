@@ -1,0 +1,46 @@
+create table username_loomaaed (id integer primary key auto_increment not null, nimi varchar(255) not null, vanus integer not null, liik varchar(255) not null, puur integer not null);
+
+insert into username_loomaaed (nimi, vanus, liik, puur) values ('Hollis',2,'hiir',1);
+insert into username_loomaaed (nimi, vanus, liik, puur) values ('Charlotte',14,'lõvi',1);
+insert into username_loomaaed (nimi, vanus, liik, puur) values ('Jae',3,'kits',2);
+insert into username_loomaaed (nimi, vanus, liik, puur) values ('Nida',2,'kits',2);
+insert into username_loomaaed (nimi, vanus, liik, puur) values ('Philip',8,'kits',4);
+
+select nimi, puur from username_loomaaed where puur=1;
++-----------+------+
+| nimi      | puur |
++-----------+------+
+| Hollis    |    1 |
+| Charlotte |    1 |
++-----------+------+
+
+select min(vanus), max(vanus) from username_loomaaed;
++------------+------------+
+| min(vanus) | max(vanus) |
++------------+------------+
+|          2 |         14 |
++------------+------------+
+
+
+select puur,count(1) loomi from username_loomaaed group by puur;
++------+-------+
+| puur | loomi |
++------+-------+
+|    1 |     2 |
+|    2 |     2 |
+|    4 |     1 |
++------+-------+
+
+update username_loomaaed set vanus=vanus+1;
+
+select * from username_loomaaed;
++----+-----------+-------+-------+------+
+| id | nimi      | vanus | liik  | puur |
++----+-----------+-------+-------+------+
+|  1 | Hollis    |     3 | hiir  |    1 |
+|  2 | Charlotte |    15 | lõvi  |    1 |
+|  3 | Jae       |     4 | kits  |    2 |
+|  4 | Nida      |     3 | kits  |    2 |
+|  5 | Philip    |     9 | kits  |    4 |
++----+-----------+-------+-------+------+
+
