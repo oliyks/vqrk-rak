@@ -1,0 +1,20 @@
+
+<?php 
+
+kuva_puurid(); 
+
+foreach ($puurid as $nr => $puur) {
+
+echo "<div>";
+  echo "<h3>Puur ".$nr."</h3>";
+  foreach ($puur as $loom) {
+    if($_SESSION['roll']=='admin'): echo "<a href=\"?page=muuda&id=".$loom['id']."\">"; endif;
+    echo "<img src=\"pildid/".$loom['liik'].".png\" alt=\"".$loom['nimi']."\" title=\"".$loom['nimi']."\"/>"; 
+    if($_SESSION['roll']=='admin'): echo "</a>"; endif;
+  }
+
+echo "</div>";
+
+}
+
+?>
