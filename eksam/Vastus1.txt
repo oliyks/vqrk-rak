@@ -1,4 +1,7 @@
 
+https://wiki.apache.org/httpd/PasswordBasicAuth
+
+
 1. faili lipääsu piiramine parooliga .htaccess fail näitel
 
 - Loo kataloogi .htaccess fail, sisuga(muuta on vaja AuthUserFile asukoht):
@@ -19,4 +22,4 @@ Re-type new password:
 Adding password for user user
 
 
-
+- veebiserverilt vastavat faili pärides küsitakse kasutajalt parooli
