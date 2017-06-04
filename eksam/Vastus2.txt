@@ -1,0 +1,8 @@
+
+
+create table toja_failikasutajad (id integer auto_increment not null primary key, parool varchar(65) not null);
+
+insert into toja_failikasutajad (parool) values (SHA2(CONCAT('yahze9Faki','useruser'),256));
+
+
+securefile.php lubab peale õige parooli sisestamist vaadata failide nimekirja ning laadida neid alla. Samal komplektil võib olla mitu parooli.

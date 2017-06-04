@@ -1,0 +1,13 @@
+<?php
+include_once('views/head.html');
+
+echo "<div>";
+  foreach ($files as $fail) {
+    echo "<a href=securefile.php?page=failid&file=".$fail.">".$fail."</a><br>"; 
+  }
+
+echo "</div>";
+
+?>
+
+
