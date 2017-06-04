@@ -1,0 +1,22 @@
+
+1. faili lipääsu piiramine parooliga .htaccess fail näitel
+
+- Loo kataloogi .htaccess fail, sisuga(muuta on vaja AuthUserFile asukoht):
+
+AuthType Basic
+AuthName "i244 Authentication Required"
+AuthUserFile "/home/username/i244-htpasswd"
+
+<FilesMatch "salajased_paroolid.txt">
+Require valid-user
+</FilesMatch>
+
+- Loo uus paroolifail ning sea selles kasutajanimi ning parool:
+
+htpasswd -c /home/username/i244-htpasswd user                                                                                                                                                                                                                             
+New password: 
+Re-type new password: 
+Adding password for user user
+
+
+

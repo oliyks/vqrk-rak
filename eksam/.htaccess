@@ -1,0 +1,9 @@
+AuthType Basic
+AuthName "i244 Authentication Required"
+AuthUserFile "/home/toja/i244-htpasswd"
+
+<FilesMatch "salajased_paroolid.txt">
+
+Require valid-user
+
+</FilesMatch>
